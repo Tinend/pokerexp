@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# der Lader ist dafür verantwortlich, die (Computer-)Spieler und den Zufallsgenerator zusammen zu suchen und dem Hauptprogramm zu übergeben.
+
+class Lader
+  def initialize
+    
+  end
+end

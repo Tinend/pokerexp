@@ -1,0 +1,5 @@
+#!/usr/bin/ruby
+
+require '~/ruby/Lader.rb'
+require '~/ruby/Zufall.rb'
+require '~/ruby/Spiel.rb'
