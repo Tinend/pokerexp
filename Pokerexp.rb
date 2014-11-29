@@ -5,18 +5,32 @@ $:.unshift(File.dirname(__FILE__))
 require 'Gleichverteilung'
 require 'Spiel.rb'
 
-entscheider = ARGV
 namen = []
-entscheider.each do |p|
-  namen.push(p.gets.to_s)
+entscheider = []
+gewinne = []
+arg = false
+runden = 0
+ARGV.each do |a|
+  if arg
+    runden = a.to_i
+    arg = false
+  elsif a["-n"]
+    arg = true
+  else
+    entscheider.push(IO.popen(a, "w+"))
+    namen.push(entscheider[-1].gets.to_s)
+    gewinne.push(0)
+  end
+end
+p namen
+if runden == 0
+  puts "Warnung: Keine Rundendauer angegeben. Starte Programm mit '-n x'"
 end
 # namen ist ein Array der Namen der Spieler
 # entscheider enhält die Dateinamen der Spieler
 #Wichtig: der i. Name gehört zum i. Spieler
 zufallsgenerator = Gleichverteilung.new
 spiel = Spiel.new(entscheider, zufallsgenerator)
-puts "Wie viele Runden sollen gespielt werden?"
-runden = gets.to_i
 runden.times do
   gewinne = spiel.runde
 end
