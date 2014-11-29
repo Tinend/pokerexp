@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 $:.unshift(File.dirname(__FILE__))
-require 'Lader.rb'
 require 'Gleichverteilung'
 require 'Spiel.rb'
 
