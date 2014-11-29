@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-require '~/ruby/pokerexp/Lader.rb'
-require '~/ruby/pokerexp/Spiel.rb'
+$:.unshift(File.dirname(__FILE__))
+require 'Lader.rb'
+require 'Spiel.rb'
 
 lader = Lader.new
 programme = lader.programme
