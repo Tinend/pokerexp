@@ -5,7 +5,6 @@ $:.unshift(File.dirname(__FILE__))
 require 'Gleichverteilung'
 require 'Spiel.rb'
 
-lader = Lader.new
 entscheider = ARGV
 namen = []
 entscheider.each do |p|
