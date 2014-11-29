@@ -6,6 +6,8 @@ spielerzahl = gets.to_i
 starteinsatz = gets.to_i
 klein = gets.to_i
 
+puts "Passer"
+# Als erstes sagen die Programme ihren Namen.
 loop do 
   neue_runde = gets.to_s
   wert = gets.to_i
