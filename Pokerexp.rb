@@ -18,6 +18,8 @@ ARGV.each do |a|
     arg = true
   else
     entscheider.push(IO.popen(a, "w+"))
+    puts entscheider.length
+    entscheider[-1].puts("Hallo")
     namen.push(entscheider[-1].gets.to_s)
     gewinne.push(0)
   end

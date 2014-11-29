@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # Dieser Spieler ist eine Vorlage wie Spieler aussehen sollen, er ist eher nicht Wettkampftauglich.
 
+bla = gets.chomp
+# Hallo sagen
 puts("Passer")
 # Als erstes sagen die Programme ihren Namen.
 spielerzahl = gets.to_i
